@@ -4,86 +4,86 @@
                 <ul class="nav side-menu">
                     <?php if ($rol == 3) : ?>
                         <li class="<?php if (isset($active1)) {
-                                            echo $active1;
-                                        } ?>">
+                                        echo $active1;
+                                    } ?>">
                             <a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a>
                         </li>
 
                         <li class="<?php if (isset($active2)) {
-                                            echo $active2;
-                                        } ?>">
+                                        echo $active2;
+                                    } ?>">
                             <a href="tickets.php"><i class="fa fa-ticket"></i> Tickets</a>
                         </li>
 
                         <li class="<?php if (isset($active3)) {
-                                            echo $active3;
-                                        } ?>">
+                                        echo $active3;
+                                    } ?>">
                             <a href="projects.php"><i class="fa fa-list-alt"></i> Departamentos</a>
                         </li>
 
                         <li class="<?php if (isset($active4)) {
-                                            echo $active4;
-                                        } ?>">
+                                        echo $active4;
+                                    } ?>">
                             <a href="categories.php"><i class="fa fa-align-left"></i> Categorías</a>
                         </li>
 
                         <li class="<?php if (isset($active5)) {
-                                            echo $active5;
-                                        } ?>">
+                                        echo $active5;
+                                    } ?>">
                             <a href="reports.php"><i class="fa fa-area-chart"></i> Reportes</a>
                         </li>
 
                         <li class="<?php if (isset($active6)) {
-                                            echo $active6;
-                                        } ?>">
+                                        echo $active6;
+                                    } ?>">
                             <a href="users.php"><i class="fa fa-users"></i> Usuarios</a>
                         </li>
 
                         <li class="<?php if (isset($active8)) {
-                                            echo $active8;
-                                        } ?>">
+                                        echo $active8;
+                                    } ?>">
                             <a href="about.php"><i class="fa fa-child"></i> Información</a>
                         </li>
 
                     <?php elseif ($rol == 2) : ?>
                         <li class="<?php if (isset($active1)) {
-                                            echo $active1;
-                                        } ?>">
+                                        echo $active1;
+                                    } ?>">
                             <a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a>
                         </li>
 
                         <li class="<?php if (isset($active2)) {
-                                            echo $active2;
-                                        } ?>">
+                                        echo $active2;
+                                    } ?>">
                             <a href="tickets.php"><i class="fa fa-ticket"></i> Tickets</a>
                         </li>
 
                         <li class="<?php if (isset($active5)) {
-                                            echo $active5;
-                                        } ?>">
+                                        echo $active5;
+                                    } ?>">
                             <a href="reports.php"><i class="fa fa-area-chart"></i> Reportes</a>
                         </li>
 
                         <li class="<?php if (isset($active8)) {
-                                            echo $active8;
-                                        } ?>">
+                                        echo $active8;
+                                    } ?>">
                             <a href="about.php"><i class="fa fa-child"></i> Información</a>
                         </li>
                     <?php elseif ($rol == 1 || $rol == 4) : ?>
                         <li class="<?php if (isset($active1)) {
-                                            echo $active1;
-                                        } ?>">
+                                        echo $active1;
+                                    } ?>">
                             <a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a>
                         </li>
 
                         <li class="<?php if (isset($active2)) {
-                                            echo $active2;
-                                        } ?>">
+                                        echo $active2;
+                                    } ?>">
                             <a href="tickets.php"><i class="fa fa-ticket"></i> Tickets</a>
                         </li>
                         <li class="<?php if (isset($active8)) {
-                                            echo $active8;
-                                        } ?>">
+                                        echo $active8;
+                                    } ?>">
                             <a href="about.php"><i class="fa fa-child"></i> Información</a>
                         </li>
                     <?php endif ?>
@@ -94,7 +94,7 @@
         </div>
 
         <div class="top_nav">
-            <!-- top navigation -->
+            <!-- top nav -->
             <div class="nav_menu">
                 <nav>
                     <div class="nav toggle">
@@ -114,4 +114,4 @@
                     </ul>
                 </nav>
             </div>
-        </div><!-- /top navigation -->
+        </div><!-- /top nav -->

@@ -9,7 +9,7 @@ $kinds = mysqli_query($con, "select * from kind");
 ?>
 
 <div class="" role="main">
-    <!-- page content -->
+    <!-- contenido -->
     <div class="">
         <div class="page-title">
             <div class="clearfix"></div>
@@ -30,7 +30,7 @@ $kinds = mysqli_query($con, "select * from kind");
                         <div class="clearfix"></div>
                     </div>
 
-                    <!-- form seach -->
+                    <!-- campo de búsqueda -->
                     <form class="form-horizontal" role="form" id="gastos">
                         <div class="form-group row">
                             <label for="q" class="col-md-2 control-label" style="display:none">Nombre/Estatus</label>
@@ -44,7 +44,7 @@ $kinds = mysqli_query($con, "select * from kind");
                             </div>
                         </div>
                     </form>
-                    <!-- end form seach -->
+                    <!-- fin de campo de búsqueda -->
 
                     <div class="x_content">
                         <div class="table-responsive">
@@ -58,7 +58,7 @@ $kinds = mysqli_query($con, "select * from kind");
             </div>
         </div>
     </div>
-</div><!-- /page content -->
+</div><!-- /contenido -->
 
 <?php include "footer.php" ?>
 

@@ -13,7 +13,7 @@ if ($rol == 2 || $rol == 3) {
 
 
     <div class="" role="main">
-        <!-- page content -->
+        <!-- contenido -->
         <div class="">
             <div class="page-title">
                 <div class="clearfix"></div>
@@ -28,7 +28,7 @@ if ($rol == 2 || $rol == 3) {
                             <div class="clearfix"></div>
                         </div>
 
-                        <!-- form search -->
+                        <!-- campo búsqueda -->
                         <form class="form-horizontal" role="form">
                             <input type="hidden" name="view" value="reports">
                             <div class="form-group">
@@ -120,7 +120,7 @@ if ($rol == 2 || $rol == 3) {
                                 </div>
                             </div>
                         </form>
-                        <!-- end form search -->
+                        <!-- fin de campo búsqueda -->
 
                         <?php
                         $users = array();
@@ -323,7 +323,7 @@ if ($rol == 2 || $rol == 3) {
                 </div>
             </div>
         </div>
-    </div><!-- /page content -->
+    </div><!-- /contenido -->
 
     <?php include "footer.php" ?>
 

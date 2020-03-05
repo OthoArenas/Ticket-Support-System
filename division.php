@@ -3,19 +3,19 @@ $title = "Divisiones | ";
 include "head.php";
 
 if ($rol == 3) {
-    ?>
+?>
 
 
     <div class="" role="main">
-        <!-- page content -->
+        <!-- contenido -->
         <div class="">
             <div class="page-title">
                 <div class="clearfix"></div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <?php
-                        include("modal/new_division.php");
-                        include("modal/upd_division.php");
-                        ?>
+                    include("modal/new_division.php");
+                    include("modal/upd_division.php");
+                    ?>
                     <div class="x_panel">
                         <div class="x_title">
                             <h2>Divisiones </h2>
@@ -26,7 +26,7 @@ if ($rol == 3) {
                             <div class="clearfix"></div>
                         </div>
 
-                        <!-- form search -->
+                        <!-- campo de búsqueda -->
                         <form class="form-horizontal" role="form" id="division_expence">
                             <div class="form-group row">
                                 <label for="q" class="col-md-2 control-label">Nombre de la División</label>
@@ -40,7 +40,7 @@ if ($rol == 3) {
                                 </div>
                             </div>
                         </form>
-                        <!-- end form search -->
+                        <!-- fin de campo de búsqueda -->
 
                         <div class="x_content">
                             <div class="table-responsive">
@@ -54,7 +54,7 @@ if ($rol == 3) {
                 </div>
             </div>
         </div>
-    </div><!-- /page content -->
+    </div><!-- /contenido -->
 
 
     <?php include "footer.php" ?>
@@ -112,7 +112,7 @@ if ($rol == 3) {
     </script>
 <?php
 } else {
-    ?>
+?>
     <h1 class="text-center">Página Restringida</h1>
 <?php
 }

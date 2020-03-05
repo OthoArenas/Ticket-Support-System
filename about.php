@@ -4,7 +4,7 @@ include "head.php";
 ?>
 
 <div class="text-center" role="main">
-    <!-- page content -->
+    <!-- contenido -->
     <div class="">
         <div class="page-title">
             <br>
@@ -52,6 +52,6 @@ include "head.php";
             </div>
         </div>
     </div>
-</div><!-- /page content -->
+</div><!-- / contenido -->
 
 <?php include "footer.php" ?>

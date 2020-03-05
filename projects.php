@@ -3,17 +3,17 @@ $title = "Departamentos | ";
 include "head.php";
 
 if ($rol == 3) {
-    ?>
+?>
     <div class="" role="main">
-        <!-- page content -->
+        <!-- contenido -->
         <div class="">
             <div class="page-title">
                 <div class="clearfix"></div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <?php
-                        include("modal/new_project.php");
-                        include("modal/upd_project.php");
-                        ?>
+                    include("modal/new_project.php");
+                    include("modal/upd_project.php");
+                    ?>
                     <div class="x_panel">
                         <div class="x_title">
                             <h2>Departamentos</h2>
@@ -24,7 +24,7 @@ if ($rol == 3) {
                             <div class="clearfix"></div>
                         </div>
 
-                        <!-- Form search -->
+                        <!-- campo de búsqueda -->
                         <form class="form-horizontal" role="form" id="ingresos">
                             <div class="form-group row">
                                 <label for="q" class="col-md-2 control-label">Nombre</label>
@@ -38,7 +38,7 @@ if ($rol == 3) {
                                 </div>
                             </div>
                         </form>
-                        <!-- end Form search -->
+                        <!-- fin de campo de búsqueda -->
 
 
                         <div class="x_content">
@@ -53,7 +53,7 @@ if ($rol == 3) {
                 </div>
             </div>
         </div>
-    </div><!-- /page content -->
+    </div><!-- /contenido -->
     <?php include "footer.php" ?>
 
     <script type="text/javascript" src="js/project.js"></script>
@@ -120,7 +120,7 @@ if ($rol == 3) {
 
 <?php
 } else {
-    ?>
+?>
     <h1 class="text-center">Página Restringida</h1>
 <?php
 }

@@ -20,7 +20,7 @@
 <!-- bootstrap-daterangepicker -->
 <!-- <link href="css/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"> -->
 
-<!-- Custom Theme Style -->
+<!-- Estilos personalizados -->
 <link href="css/custom.css" rel="stylesheet">
 
 <!-- MICSS button[type="file"] -->
@@ -40,7 +40,7 @@
 <script src="css/nprogress/nprogress.js"></script>
 <!-- iCheck -->
 <script src="css/iCheck/icheck.min.js"></script>
-<!-- jQuery custom content scroller -->
+<!-- jQuery scroller -->
 <script src="css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- ChartsJS -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
@@ -52,7 +52,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
 
 
-<!-- Custom Theme Scripts -->
+<!-- Scripts personalizados -->
 <script src="js/custom.min.js"></script>
 
 <!-- DateJS -->
@@ -67,17 +67,10 @@
         var instances = M.Sidenav.init(elems, options);
     });
 
-    // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-    // var collapsibleElem = document.querySelector('.collapsible');
-    // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
-    // Or with jQuery
-
     $(document).ready(function() {
         $('.sidenav').sidenav();
     });
 
-    // Or with jQuery
 
     $(document).ready(function() {
         $('.select_ok').formSelect();

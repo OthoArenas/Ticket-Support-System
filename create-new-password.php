@@ -11,6 +11,8 @@ include("scripts.php");
             $selector = $_GET['selector'];
             $validator = $_GET['validator'];
 
+            /* Mensajes de error y éxito */
+
             if (isset($_GET['reset'])) {
                 if ($_GET['reset'] == "success") {
                     echo "<div class='alert alert-success alert-dismissible fade in' role='alert'>
@@ -42,6 +44,8 @@ include("scripts.php");
             } else {
                 if (ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false) {
             ?>
+
+                    <!-- Formulario de creación de nueva contraseña -->
                     <section class="login_content">
                         <form action="action/reset-password-action.php" method="post">
                             <h1>Crear Contraseña</h1>

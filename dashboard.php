@@ -13,7 +13,7 @@ $divisions = mysqli_query($con, "select * from division order by name");
 $zonas = mysqli_query($con, "select * from zona order by name");
 ?>
 <div class="container" role="main">
-    <!-- page content -->
+    <!-- contenido -->
     <div class="container">
         <div class="page-title">
             <?php if ($rol == 2 || $rol == 3) : ?>
@@ -47,7 +47,7 @@ $zonas = mysqli_query($con, "select * from zona order by name");
                                 <h3>Tickets Cancelados</h3>
                             </div>
                         </div>
-                    </div> <!-- /first row -->
+                    </div> <!-- / row -->
                     <?php if ($rol == 3) : ?>
                         <div class="container">
                             <div class="row justify-content-center">
@@ -200,7 +200,7 @@ $zonas = mysqli_query($con, "select * from zona order by name");
             </div>
         </div>
     </div>
-</div><!-- /page content -->
+</div><!-- /contenido -->
 
 <?php include "footer.php" ?>
 <script>

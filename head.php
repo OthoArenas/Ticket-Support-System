@@ -63,13 +63,13 @@ $zona_name = $result_zona['name'];
     <link href="css/animate.css/animate.min.css" rel="stylesheet">
     <!-- Datatables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css" />
-    <!-- jQuery custom content scroller -->
+    <!-- jQuery scroller -->
     <link href="css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
 
     <!-- bootstrap-daterangepicker -->
     <!-- <link href="css/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet"> -->
 
-    <!-- Custom Theme Style -->
+    <!-- Estilos personalizados -->
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- MICSS button[type="file"] -->
@@ -86,7 +86,7 @@ $zona_name = $result_zona['name'];
 </div>
 
 
-<!-- Dropdown Structure -->
+<!-- Estructura dropdown -->
 <ul id="dropdown1" class="dropdown-content">
     <li><a class="dropdown-trigger float-left user-profile" href="#!" data-target="dropdown1"><img src="images/profiles/<?php echo $profile_pic; ?>" alt="" style="object-fit:cover"><?php echo $name . " " . $lastname; ?></a></li>
     <li><a href="dashboard.php"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a></li>
@@ -119,98 +119,98 @@ $zona_name = $result_zona['name'];
     </li>
     <?php if ($rol == 3) : ?>
         <li class="<?php if (isset($active1)) {
-                            echo $active1;
-                        } ?>">
+                        echo $active1;
+                    } ?>">
             <a href="dashboard.php"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a>
         </li>
 
         <li class="<?php if (isset($active2)) {
-                            echo $active2;
-                        } ?>">
+                        echo $active2;
+                    } ?>">
             <a href="tickets.php"><i class="fa fa-ticket-alt fa-fw"></i> Tickets</a>
         </li>
 
         <li class="<?php if (isset($active3)) {
-                            echo $active3;
-                        } ?>">
+                        echo $active3;
+                    } ?>">
             <a href="projects.php"><i class="fa fa-list-alt fa-fw"></i> Departamentos</a>
         </li>
 
         <li class="<?php if (isset($active4)) {
-                            echo $active4;
-                        } ?>">
+                        echo $active4;
+                    } ?>">
             <a href="categories.php"><i class="fa fa-align-left fa-fw"></i> Categorías</a>
         </li>
 
         <li class="<?php if (isset($active5)) {
-                            echo $active5;
-                        } ?>">
+                        echo $active5;
+                    } ?>">
             <a href="reports.php"><i class="fas fa-chart-line fa-fw"></i> Reportes</a>
         </li>
 
         <li class="<?php if (isset($active6)) {
-                            echo $active6;
-                        } ?>">
+                        echo $active6;
+                    } ?>">
             <a href="users.php"><i class="fa fa-users fa-fw"></i> Usuarios</a>
         </li>
 
         <li class="<?php if (isset($active7)) {
-                            echo $active7;
-                        } ?>">
+                        echo $active7;
+                    } ?>">
             <a href="division.php"><i class="fas fa-globe-americas fa-fw"></i> Divisiones</a>
         </li>
 
         <li class="<?php if (isset($active8)) {
-                            echo $active8;
-                        } ?>">
+                        echo $active8;
+                    } ?>">
             <a href="zonas.php"><i class="fas fa-map-marker-alt fa-fw"></i> Zonas</a>
         </li>
 
         <li class="<?php if (isset($active9)) {
-                            echo $active9;
-                        } ?>">
+                        echo $active9;
+                    } ?>">
             <a href="about.php"><i class="fa fa-child fa-fw"></i> Información</a>
         </li>
 
     <?php elseif ($rol == 2) : ?>
         <li class="<?php if (isset($active1)) {
-                            echo $active1;
-                        } ?>">
+                        echo $active1;
+                    } ?>">
             <a href="dashboard.php"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a>
         </li>
 
         <li class="<?php if (isset($active2)) {
-                            echo $active2;
-                        } ?>">
+                        echo $active2;
+                    } ?>">
             <a href="tickets.php"><i class="fa fa-ticket-alt fa-fw"></i> Tickets</a>
         </li>
 
         <li class="<?php if (isset($active5)) {
-                            echo $active5;
-                        } ?>">
+                        echo $active5;
+                    } ?>">
             <a href="reports.php"><i class="fas fa-chart-line fa-fw"></i> Reportes</a>
         </li>
 
         <li class="<?php if (isset($active8)) {
-                            echo $active8;
-                        } ?>">
+                        echo $active8;
+                    } ?>">
             <a href="about.php"><i class="fa fa-child fa-fw"></i> Información</a>
         </li>
     <?php elseif ($rol == 1 || $rol == 4) : ?>
         <li class="<?php if (isset($active1)) {
-                            echo $active1;
-                        } ?>">
+                        echo $active1;
+                    } ?>">
             <a href="dashboard.php"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a>
         </li>
 
         <li class="<?php if (isset($active2)) {
-                            echo $active2;
-                        } ?>">
+                        echo $active2;
+                    } ?>">
             <a href="tickets.php"><i class="fa fa-ticket-alt fa-fw"></i> Tickets</a>
         </li>
         <li class="<?php if (isset($active8)) {
-                            echo $active8;
-                        } ?>">
+                        echo $active8;
+                    } ?>">
             <a href="about.php"><i class="fa fa-child fa-fw"></i> Información</a>
         </li>
     <?php endif ?>

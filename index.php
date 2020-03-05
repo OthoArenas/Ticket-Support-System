@@ -35,7 +35,7 @@ if (isset($_SESSION['user_id']) && $_SESSION !== null) {
     <!-- Animate.css -->
     <link href="css/animate.css/animate.min.css" rel="stylesheet">
 
-    <!-- Custom Theme Style -->
+    <!-- Estilos personalizados -->
     <link href="css/custom.css" rel="stylesheet">
 
 </head>
@@ -47,6 +47,7 @@ if (isset($_SESSION['user_id']) && $_SESSION !== null) {
         <div class="login_wrapper">
             <div class="animate form login_form">
                 <?php
+                /* Mensajes de error y éxito */
                 $invalid = sha1(md5("contraseña y/o email incorrectos"));
                 $invalid2 = sha1(md5("El usuario ingresado no se encuentra Activo. Por favor verifique su correo electrónico para la activación o póngase en contacto con el administrador."));
                 $invalid3 = sha1(md5("El usuario ingresado no se encuentra en nuestra Base de Datos. Puede registrarse dando click al botón \"Registrarse\"."));
