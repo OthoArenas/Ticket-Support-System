@@ -60,8 +60,8 @@ if ($rol == 2 || $rol == 3) {
         include 'pagination.php'; //archivo de paginación
         //variables de paginación
         $page = (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) ? $_REQUEST['page'] : 1;
-        $per_page = 10; //número de registros a mostrar
-        $adjacents  = 4; //espacios entre adyacentes
+        $per_page = 100000000; //número de registros a mostrar
+        $adjacents = 4; //espacios entre adyacentes
         $offset = ($page - 1) * $per_page;
         //cuenta número de registros*/
         $count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  $sWhere");
