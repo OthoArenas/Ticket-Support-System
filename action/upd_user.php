@@ -108,7 +108,7 @@ if (!empty($_POST['mod_password']) && empty($_POST['mod_password_2'])) {
 
 		$messages[] = "Datos actualizados exitosamente.";
 
-		// update password
+		// actualizar password
 		if ($_POST["mod_password"] != "") {
 			if (empty($_POST['mod_password_2'])) {
 				$errors[] = "Comprueba la contraseña";

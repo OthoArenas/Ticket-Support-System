@@ -135,7 +135,7 @@ if (isset($_POST['upd_profile'])) {
 		}
 	}
 
-	// CHANGE PASSWORD
+	// cambio de password
 	if ($_POST['password'] != "") {
 
 		$old_password = $_POST['password'];

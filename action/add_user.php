@@ -54,7 +54,6 @@ if ($rol == 3 || !isset($_SESSION['user_id'])) {
 
 		include "../config/config.php"; //Contiene funcion que conecta a la base de datos
 
-		// escaping, additionally removing everything that could be (html/javascript-) code
 		$name = mysqli_real_escape_string($con, (strip_tags($_POST["name"], ENT_QUOTES)));
 		$username = mysqli_real_escape_string($con, (strip_tags($_POST["username"], ENT_QUOTES)));
 		$lastname = mysqli_real_escape_string($con, (strip_tags($_POST["lastname"], ENT_QUOTES)));
