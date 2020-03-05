@@ -21,7 +21,7 @@ if (isset($_POST['reset-password-submit'])) {
         } else {
             $selector = bin2hex(random_bytes(8));
             $token = random_bytes(32);
-            $url = "https://golfoticket.dsignstudio.com.mx/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
+            $url = "https://support.dsignstudio.com.mx/create-new-password.php?selector=" . $selector . "&validator=" . bin2hex($token);
             $expires = date("U") + 7200; /* Formato U toma los segundos desde enero de 1970, se le agregan 7200 segundos para un total de 2 horas */
 
             $sql = "DELETE FROM pwdReset WHERE pwdResetEmail = ? ;";

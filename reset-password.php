@@ -40,10 +40,10 @@ include("scripts.php");
                 <form action="action/reset-request-action.php" method="post">
                     <h1>Recuperar Contraseña</h1>
                     <div>
-                        <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico" required />
+                        <input type="email" name="email" class="form-control text-center" placeholder="Ingresa tu correo electrónico" required />
                     </div>
                     <div>
-                        <button type="submit" name="reset-password-submit" value="reset_password_submit" class="btn btn-primary">Recuperar</button>
+                        <button type="submit" name="reset-password-submit" value="reset_password_submit" class="btn btn-success">Recuperar</button>
                     </div>
                     <div class="clearfix"></div>
                     <br>

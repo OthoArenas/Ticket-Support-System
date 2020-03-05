@@ -41,16 +41,16 @@ include("scripts.php");
                 echo "No es posible validar su solicitud de restablecimiento de contraseña";
             } else {
                 if (ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false) {
-                    ?>
+            ?>
                     <section class="login_content">
                         <form action="action/reset-password-action.php" method="post">
                             <h1>Crear Contraseña</h1>
                             <div>
                                 <input type="hidden" name="selector" value="<?php echo $selector; ?>">
                                 <input type="hidden" name="validator" value="<?php echo $validator; ?>">
-                                <input type="password" class="form-control" name="new_password" placeholder="Ingresa tu nueva contraseña">
-                                <input type="password" class="form-control" name="new_password_confirm" placeholder="Confirma tu nueva contraseña">
-                                <button type="submit" name="new-password-submit" class="btn btn-primary">Restablecer Contraseña</button>
+                                <input type="password" class="form-control text-center" name="new_password" placeholder="Ingresa tu nueva contraseña">
+                                <input type="password" class="form-control text-center" name="new_password_confirm" placeholder="Confirma tu nueva contraseña">
+                                <button type="submit" name="new-password-submit" class="btn btn-success">Restablecer Contraseña</button>
                             </div>
                             <div class="clearfix"></div>
                             <br>

@@ -83,7 +83,7 @@ if (!empty($_POST['mod_password']) && empty($_POST['mod_password_2'])) {
 			$status_name = "Inactivo";
 		}
 
-		$golfoUrl = "<a href='https://golfoticket.dsignstudio.com.mx/index.php'>Golfo Ticket</a>";
+		$golfoUrl = "<a href='https://support.dsignstudio.com.mx/index.php'>Golfo Ticket</a>";
 
 		$to = $email;
 		$subject = "Datos de usuario modificados | Golfo Ticket";
@@ -141,29 +141,29 @@ if (!empty($_POST['mod_password']) && empty($_POST['mod_password_2'])) {
 
 if (isset($errors)) {
 
-	?>
+?>
 	<div class="alert alert-danger" role="alert">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>¡Error!</strong>
 		<?php
-			foreach ($errors as $error) {
-				echo $error;
-			}
-			?>
+		foreach ($errors as $error) {
+			echo $error;
+		}
+		?>
 	</div>
 <?php
 }
 if (isset($messages)) {
 
-	?>
+?>
 	<div class="alert alert-success" role="alert">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>¡Bien hecho!</strong>
 		<?php
-			foreach ($messages as $message) {
-				echo $message;
-			}
-			?>
+		foreach ($messages as $message) {
+			echo $message;
+		}
+		?>
 	</div>
 <?php
 }

@@ -96,7 +96,7 @@ if ($rol == 3 || !isset($_SESSION['user_id'])) {
 			if ($query_new_insert) {
 				$messages[] = "El usuario ha sido ingresado exitosamente. <br> Un correo de verificación será enviado al correo: <strong>$email</strong>";
 				/* El enlace se deberá enviar por email al usuario para que al dar click verifique el registro y permita iniciar sesión */
-				$activationUrl = "<a href='https://golfoticket.dsignstudio.com.mx/confirmation.php?email=$email&token=$token'>Haz Click</a>";
+				$activationUrl = "<a href='https://support.dsignstudio.com.mx/confirmation.php?email=$email&token=$token'>Haz Click</a>";
 				$to = $email;
 				$subject = "Código de Activación de su cuenta en Golfo Ticket";
 				$message = "<p>Bienvenid@ $name $lastname, a Golfo Ticket. Aquí podrás generar Tickets o Reportes para Soporte Técnico.</p>";
@@ -118,29 +118,29 @@ if ($rol == 3 || !isset($_SESSION['user_id'])) {
 
 	if (isset($errors)) {
 
-		?>
+?>
 		<div class="alert alert-danger" role="alert">
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
 			<strong>¡Error!</strong>
 			<?php
-					foreach ($errors as $error) {
-						echo $error;
-					}
-					?>
+			foreach ($errors as $error) {
+				echo $error;
+			}
+			?>
 		</div>
 	<?php
-		}
-		if (isset($messages)) {
+	}
+	if (isset($messages)) {
 
-			?>
+	?>
 		<div class="alert alert-success" role="alert">
 			<button type="button" class="close" data-dismiss="alert">&times;</button>
 			<strong>¡Bien hecho!</strong>
 			<?php
-					foreach ($messages as $message) {
-						echo $message;
-					}
-					?>
+			foreach ($messages as $message) {
+				echo $message;
+			}
+			?>
 		</div>
 <?php
 	}

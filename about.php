@@ -12,7 +12,7 @@ include "head.php";
                 <div class="col-xs-12 col-md-8">
                     <h1>Acerca del sistema</h1>
                     <hr>
-                    <p><strong><a target="_blank" href="http://dsignstudio.com.mx">Othoniel Salazar</a></strong> <strong><a target="_blank" href="http://dsignstudio.com.mx">(D-Sign Studio)</a></strong> creador de <a>GOLFO TICKET</a>.</p>
+                    <p><strong><a target="_blank" href="https://github.com/OthoArenas/Ticket-Support-System">Othoniel Salazar</a></strong> <strong><a target="_blank" href="http://dsignstudio.com.mx">(D-Sign Studio)</a></strong> creador de <a>GOLFO TICKET</a>.</p>
 
                     <br><br>
 
