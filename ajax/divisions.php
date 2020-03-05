@@ -8,14 +8,14 @@ if (isset($_GET['id'])) {
     $query = mysqli_query($con, "SELECT * from division where id='" . $id_del . "'");
     $count = mysqli_num_rows($query);
     if ($delete1 = mysqli_query($con, "DELETE FROM division WHERE id='" . $id_del . "'")) {
-        ?>
+?>
         <div class="alert alert-success alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <strong>¡Aviso!</strong> Datos eliminados exitosamente.
         </div>
     <?php
-        } else {
-            ?>
+    } else {
+    ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <strong>¡Error!</strong> No se pudo eliminar ésta división. Existen tickets vinculadas a ésta división.
@@ -27,7 +27,6 @@ if (isset($_GET['id'])) {
 
 <?php
 if ($action == 'ajax') {
-    // escaping, additionally removing everything that could be (html/javascript-) code
     $q = mysqli_real_escape_string($con, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
     $aColumns = array('name'); //Columnas de busqueda
     $sTable = "division";
@@ -41,25 +40,25 @@ if ($action == 'ajax') {
         $sWhere .= ')';
     }
     $sWhere .= " order by name desc";
-    include 'pagination.php'; //include pagination file
-    //pagination variables
+    include 'pagination.php'; //archivo de paginación
+    //variables de paginación
     $page = (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) ? $_REQUEST['page'] : 1;
-    $per_page = 10; //how much records you want to show
-    $adjacents  = 4; //gap between pages after number of adjacents
+    $per_page = 10; //número de registros a mostrar
+    $adjacents  = 4; //espacios entre adyacentes
     $offset = ($page - 1) * $per_page;
-    //Count the total number of row in your table*/
+    //cuenta número de registros*/
     $count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  $sWhere");
     $row = mysqli_fetch_array($count_query);
     $numrows = $row['numrows'];
     $total_pages = ceil($numrows / $per_page);
     $reload = './divisions.php';
-    //main query to fetch the data
+    //obtención de datos
     $sql = "SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
     $query = mysqli_query($con, $sql);
-    //loop through fetched data
+    //loop para mostrar datos
     if ($numrows > 0) {
 
-        ?>
+?>
         <table class="table table-striped jambo_table bulk_action">
             <thead>
                 <tr class="headings">
@@ -69,10 +68,10 @@ if ($action == 'ajax') {
             </thead>
             <tbody>
                 <?php
-                        while ($r = mysqli_fetch_array($query)) {
-                            $id = $r['id'];
-                            $name = $r['name'];
-                            ?>
+                while ($r = mysqli_fetch_array($query)) {
+                    $id = $r['id'];
+                    $name = $r['name'];
+                ?>
                     <input type="hidden" value="<?php echo $id; ?>" id="id<?php echo $id; ?>">
                     <input type="hidden" value="<?php echo $name; ?>" id="name<?php echo $id; ?>">
 
@@ -83,8 +82,8 @@ if ($action == 'ajax') {
                                 <a href="#" class='btn btn-default' title='Borrar producto' onclick="eliminar('<?php echo $id; ?>')"><i class="fas fa-trash fa-fw"></i></a></span></td>
                     </tr>
                 <?php
-                        } //end while
-                        ?>
+                } //end while
+                ?>
                 <tr>
                     <td colspan=6><span class="pull-right">
                             <?php echo paginate($reload, $page, $total_pages, $adjacents); ?>
@@ -93,8 +92,8 @@ if ($action == 'ajax') {
         </table>
         </div>
     <?php
-        } else {
-            ?>
+    } else {
+    ?>
         <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <strong>¡Aviso!</strong> No hay datos para mostrar

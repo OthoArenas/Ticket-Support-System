@@ -1,6 +1,6 @@
 <?php
 
-//function de alertas by abisoft https://github.com/amnersaucedososa
+//función de alertas
 function profile()
 {
     $success = sha1(md5("datos actualizados"));

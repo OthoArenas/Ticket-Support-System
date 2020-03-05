@@ -12,22 +12,22 @@ if (isset($_GET['id'])) {
     $count = mysqli_num_rows($query);
     if ($rol != 3 && $id_expence != 1) {
         if ($delete1 = mysqli_query($con, "DELETE FROM user WHERE id='" . $id_expence . "'")) {
-            ?>
+?>
             <div class="alert alert-success alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <strong>¡Aviso!</strong> Datos eliminados exitosamente.
             </div>
         <?php
-                } else {
-                    ?>
+        } else {
+        ?>
             <div class="alert alert-danger alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <strong>¡Error!</strong> Lo sentimos, algo ha salido mal. Intenta nuevamente.
             </div>
         <?php
-                } //end else
-            } else {
-                ?>
+        } //end else
+    } else {
+        ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <strong>¡Error!</strong> Lo sentimos, no se pueden eliminar cuentas de administrador
@@ -39,7 +39,6 @@ if (isset($_GET['id'])) {
 
 <?php
 if ($action == 'ajax') {
-    // escaping, additionally removing everything that could be (html/javascript-) code
     $q = mysqli_real_escape_string($con, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
     $aColumns = array('name', 'lastname', 'rol', 'email', 'division_id', 'zona_id'); //Columnas de busqueda
     $sTable = "user";
@@ -53,25 +52,25 @@ if ($action == 'ajax') {
         $sWhere .= ')';
     }
     $sWhere .= " order by created_at desc";
-    include 'pagination.php'; //include pagination file
-    //pagination variables
+    include 'pagination.php'; //archivo de paginación
+    //variables de paginación
     $page = (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) ? $_REQUEST['page'] : 1;
-    $per_page = 10; //how much records you want to show
-    $adjacents  = 4; //gap between pages after number of adjacents
+    $per_page = 10; //número de registros a mostrar
+    $adjacents  = 4; //espacios entre adyacentes
     $offset = ($page - 1) * $per_page;
-    //Count the total number of row in your table*/
+    //cuenta número de registros*/
     $count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  $sWhere");
     $row = mysqli_fetch_array($count_query);
     $numrows = $row['numrows'];
     $total_pages = ceil($numrows / $per_page);
     $reload = './users.php';
-    //main query to fetch the data
+    //obtención de datos
     $sql = "SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
     $query = mysqli_query($con, $sql);
-    //loop through fetched data
+    //loop para mostrar datos
     if ($numrows > 0) {
 
-        ?>
+?>
         <table class="table table-striped jambo_table bulk_action">
             <thead>
                 <tr class="headings">
@@ -88,40 +87,40 @@ if ($action == 'ajax') {
             </thead>
             <tbody>
                 <?php
-                        while ($r = mysqli_fetch_array($query)) {
-                            $id = $r['id'];
-                            $status = $r['is_active'];
-                            $username = $r['username'];
-                            $rol_id = $r['rol'];
-                            if ($status == 1) {
-                                $status_f = "Activo";
-                            } else {
-                                $status_f = "Inactivo";
-                            }
+                while ($r = mysqli_fetch_array($query)) {
+                    $id = $r['id'];
+                    $status = $r['is_active'];
+                    $username = $r['username'];
+                    $rol_id = $r['rol'];
+                    if ($status == 1) {
+                        $status_f = "Activo";
+                    } else {
+                        $status_f = "Inactivo";
+                    }
 
-                            $name = $r['name'];
-                            $lastname = $r['lastname'];
-                            $end_name = $name . " " . $lastname;
-                            $email = $r['email'];
-                            $division_id = $r['division_id'];
-                            $zona_id = $r['zona_id'];
-                            $created_at = date('d/m/Y', strtotime($r['created_at']));
+                    $name = $r['name'];
+                    $lastname = $r['lastname'];
+                    $end_name = $name . " " . $lastname;
+                    $email = $r['email'];
+                    $division_id = $r['division_id'];
+                    $zona_id = $r['zona_id'];
+                    $created_at = date('d/m/Y', strtotime($r['created_at']));
 
-                            $sql_rol = mysqli_query($con, "select * from rol where id=$rol_id");
-                            if ($c = mysqli_fetch_array($sql_rol)) {
-                                $rol = $c['name'];
-                            }
+                    $sql_rol = mysqli_query($con, "select * from rol where id=$rol_id");
+                    if ($c = mysqli_fetch_array($sql_rol)) {
+                        $rol = $c['name'];
+                    }
 
-                            $sql_division = mysqli_query($con, "select * from division where id=$division_id");
-                            if ($c = mysqli_fetch_array($sql_division)) {
-                                $division_name = $c['name'];
-                            }
+                    $sql_division = mysqli_query($con, "select * from division where id=$division_id");
+                    if ($c = mysqli_fetch_array($sql_division)) {
+                        $division_name = $c['name'];
+                    }
 
-                            $sql_zona = mysqli_query($con, "select * from zona where id=$zona_id");
-                            if ($c = mysqli_fetch_array($sql_zona)) {
-                                $zona_name = $c['name'];
-                            }
-                            ?>
+                    $sql_zona = mysqli_query($con, "select * from zona where id=$zona_id");
+                    if ($c = mysqli_fetch_array($sql_zona)) {
+                        $zona_name = $c['name'];
+                    }
+                ?>
                     <input type="hidden" value="<?php echo $username; ?>" id="username<?php echo $id; ?>">
                     <input type="hidden" value="<?php echo $name; ?>" id="name<?php echo $id; ?>">
                     <input type="hidden" value="<?php echo $lastname; ?>" id="lastname<?php echo $id; ?>">
@@ -145,8 +144,8 @@ if ($action == 'ajax') {
                                 <a href="#" class='btn btn-default' title='Borrar producto' onclick="eliminar('<?php echo $id; ?>')"><i class="fas fa-trash fa-fw"></i></a></span></td>
                     </tr>
                 <?php
-                        } //end while
-                        ?>
+                } //end while
+                ?>
                 <tr>
                     <td colspan=9><span class="pull-right">
                             <?php echo paginate($reload, $page, $total_pages, $adjacents); ?>
@@ -155,8 +154,8 @@ if ($action == 'ajax') {
         </table>
         </div>
     <?php
-        } else {
-            ?>
+    } else {
+    ?>
         <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <strong>¡Aviso!</strong> No hay datos para mostrar

@@ -44,7 +44,6 @@ if ($rol == 2 || $rol == 3) {
 
     <?php
     if ($action == 'ajax') {
-        // escaping, additionally removing everything that could be (html/javascript-) code
         $q = mysqli_real_escape_string($con, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
         $aColumns = array('title', 'status_id'); //Columnas de busqueda
         $sTable = "ticket";
@@ -58,22 +57,22 @@ if ($rol == 2 || $rol == 3) {
             $sWhere .= ')';
         }
         $sWhere .= " order by created_at desc";
-        include 'pagination.php'; //include pagination file
-        //pagination variables
+        include 'pagination.php'; //archivo de paginación
+        //variables de paginación
         $page = (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) ? $_REQUEST['page'] : 1;
-        $per_page = 100000000; //how much records you want to show
-        $adjacents  = 4; //gap between pages after number of adjacents
+        $per_page = 10; //número de registros a mostrar
+        $adjacents  = 4; //espacios entre adyacentes
         $offset = ($page - 1) * $per_page;
-        //Count the total number of row in your table*/
+        //cuenta número de registros*/
         $count_query   = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable  $sWhere");
         $row = mysqli_fetch_array($count_query);
         $numrows = $row['numrows'];
         $total_pages = ceil($numrows / $per_page);
         $reload = './expences.php';
-        //main query to fetch the data
+        //obtención de datos
         $sql = "SELECT * FROM  $sTable $sWhere LIMIT $offset,$per_page";
         $query = mysqli_query($con, $sql);
-        //loop through fetched data
+        //loop para mostrar datos
         if ($numrows > 0) {
 
     ?>
